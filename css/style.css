@@ -1,0 +1,189 @@
+/*GLOBAL*/
+
+Body {
+    font-family: arial, verdana;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-family: arial black;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*HEADER OG NAV*/
+
+.header {
+    width: 100%;
+    height: 150px;
+    background: #1f7fa0;
+}
+
+.navul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    background-color: white;
+}
+
+.navli {
+    flex-grow: 1;
+}
+
+/*INDHOLD*/
+
+.tekststykke {
+    background-color: white;
+    width: 100%;
+}
+
+/*FOOTER*/
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background: #1f7fa0;
+}
+
+.footertekst {
+    color: white;
+    margin-left: 1.5%;
+}
+
+.footerbb {
+    font-family: arial black;
+    font-size: 1.5em;
+}
+
+.jmh {
+    font-family: arial;
+    font-size: 1.3em;
+    margin-top: -25px;
+}
+
+/*MOBIL*/
+
+@media (max-width: 767px) {
+    .header {
+        margin-top: -10%;
+        height: 80px;
+    }
+    .headerskrift {
+        font-size: 2.5em;
+        padding-top: 6%;
+    }
+    /*nav*/
+    .navul {
+        display: none;
+    }
+    /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1f7fa0;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+    /* Add an active class to highlight the current page */
+.active {
+    color: white;
+}
+    .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+    .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+    
+}
+
+/*TABLET*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        margin-top: -7%;
+    }
+    .headerskrift {
+        font-size: 4em;
+        padding-top: 3.5%;
+    }
+    
+    /*NAV*/
+    .navul {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1024px) {
+    .header {
+        margin-top: -5%;
+    }
+
+    .headerskrift {
+        font-size: 4em;
+        padding-top: 3%;
+    }
+
+    
+    /*NAV*/
+    .topnav {
+        display: none;
+    }
+    /*hover effekt*/
+    a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    .navul {
+        margin-left: 17%;
+        margin-right: 15%;
+    }
+}
